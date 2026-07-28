@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yimaa Technology - Building the Future of Play-to-Earn</title>
-<meta name="description" content="Yimaa Technology, headquartered in Dubai, builds trusted Play-to-Earn gaming ecosystems where skill creates real value. Home of CJC Race." />
+<title>Yimaa Technology - Play-to-Earn Gaming Studio</title>
+<meta name="description" content="Yimaa Technology is a Dubai-based studio building Play-to-Earn games where skill turns into real rewards. Makers of CJC Race." />
 <style>
   :root{
     --bg:#050a15;
@@ -236,6 +236,63 @@
   }
   .loc{display:inline-flex;align-items:center;gap:8px;color:var(--muted)}
 
+  /* hero centered + running video */
+  .hero-center{max-width:780px;margin:0 auto;text-align:center}
+  .hero-center .hero-cta{justify-content:center}
+  .hero-video{max-width:940px;margin:60px auto 0;position:relative}
+  .video-el{width:100%;display:block;border-radius:12px;aspect-ratio:16/9;object-fit:cover;background:#070d18}
+  .hero-video .video-ph{position:absolute;inset:10px;width:auto;height:auto}
+  .hero .hero-stats{justify-content:center}
+
+  /* hero v2 split + video placeholder */
+  .hero-split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .video-frame{
+    position:relative;border:1px solid var(--line);border-radius:20px;padding:10px;
+    background:linear-gradient(160deg,rgba(43,143,255,.2),rgba(56,224,200,.06) 60%,transparent);
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+  }
+  .video-ph{
+    position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 30% 15%,rgba(43,143,255,.28),transparent 55%),
+      linear-gradient(180deg,#0c1930,#070d18);
+    display:grid;place-items:center;
+  }
+  .video-ph .grid-tiny{
+    position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:40px 40px;
+    mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 30%,transparent 100%);
+    -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 30%,transparent 100%);
+  }
+  .play-btn{
+    position:relative;width:76px;height:76px;border-radius:50%;cursor:pointer;
+    background:linear-gradient(120deg,var(--gold),#1b6fe0);
+    display:grid;place-items:center;color:#fff;border:0;
+    box-shadow:0 10px 34px rgba(43,143,255,.5);
+    transition:transform .25s ease;
+  }
+  .play-btn:hover{transform:scale(1.08)}
+  .play-btn::before{
+    content:"";position:absolute;inset:-10px;border-radius:50%;
+    border:1px solid rgba(43,143,255,.4);animation:pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+  .play-btn svg{margin-left:5px}
+  .video-cap{
+    position:absolute;left:16px;bottom:14px;display:flex;align-items:center;gap:9px;
+    font-size:12.5px;color:var(--muted);
+  }
+  .video-cap .rec{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal)}
+  .video-tag{
+    position:absolute;right:16px;top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink);background:rgba(0,0,0,.4);padding:6px 12px;border-radius:100px;border:1px solid var(--line);
+  }
+  @media(max-width:900px){
+    .hero-split{grid-template-columns:1fr;gap:40px}
+    .video-frame{order:-1}
+  }
+
   /* reveal anim */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
@@ -293,10 +350,10 @@
       <span><b>Yimaa</b><span>Technology</span></span>
     </a>
     <nav class="nav-links">
-      <a href="#vision">Vision</a>
-      <a href="#shift">The Shift</a>
-      <a href="#ecosystem">Ecosystem</a>
+      <a href="#about">About</a>
+      <a href="#why">Why Yimaa</a>
       <a href="#race">CJC Race</a>
+      <a href="#ecosystem">What's Next</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
@@ -309,70 +366,98 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="close" id="closeBtn" aria-label="Close menu">&times;</button>
-  <a href="#vision">Vision</a>
-  <a href="#shift">The Shift</a>
-  <a href="#ecosystem">Ecosystem</a>
+  <a href="#about">About</a>
+  <a href="#why">Why Yimaa</a>
   <a href="#race">CJC Race</a>
+  <a href="#ecosystem">What's Next</a>
   <a href="#contact">Contact</a>
-  <a class="btn btn-primary" href="#contact" style="margin-top:6px">Get in Touch →</a>
+  <a class="btn btn-primary" href="#race" style="margin-top:6px">Play CJC Race →</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="grid-bg"></div>
   <div class="wrap">
-    <div class="hero-tag reveal"><span class="dot"></span> Headquartered in Dubai &middot; Play-to-Earn Gaming</div>
-    <h1 class="reveal">Building the future of <span class="grad">Play-to-Earn.</span></h1>
-    <p class="lead reveal">We create trusted gaming ecosystems where skill creates real value - empowering players and unlocking new opportunities across the world.</p>
-    <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="#race">Discover CJC Race →</a>
-      <a class="btn btn-ghost" href="#vision">Our Vision</a>
+    <div class="hero-center">
+      <div class="hero-tag reveal"><span class="dot"></span> Play-to-Earn Gaming Studio &middot; Dubai</div>
+      <h1 class="reveal">Games where <span class="grad">skill pays.</span></h1>
+      <p class="lead reveal" style="margin-left:auto;margin-right:auto">We build blockchain games where your skill turns into real rewards. It starts with CJC Race.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#race">Explore CJC Race →</a>
+        <a class="btn btn-ghost" href="#about">About Us</a>
+      </div>
     </div>
+
+    <!-- ================= HOMEPAGE VIDEO =================
+         The film runs here. When you have the file, keep the <video>
+         below and set its src (drop brand-film.mp4 in this folder).
+         Prefer YouTube/Vimeo? Replace the whole .video-frame with:
+           <div class="video-frame"><div class="video-ph">
+             <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0"
+               src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1"
+               allow="autoplay; fullscreen" allowfullscreen></iframe>
+           </div></div>
+    ==================================================== -->
+    <div class="video-frame hero-video reveal">
+      <video class="video-el" autoplay muted loop playsinline id="heroVideoEl">
+        <source src="brand-film.mp4" type="video/mp4">
+      </video>
+      <!-- Fallback placeholder (auto-hides once a real video plays) -->
+      <div class="video-ph" id="videoPh">
+        <div class="grid-tiny"></div>
+        <span class="video-tag">Brand Film</span>
+        <button class="play-btn" aria-label="Play brand film">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="video-cap"><span class="rec"></span> Yimaa Technology &middot; Brand Film</div>
+      </div>
+    </div>
+
     <div class="hero-stats reveal">
-      <div><div class="n grad">Skill</div><div class="l">Creates real value</div></div>
-      <div><div class="n">USDT</div><div class="l">Real rewards on-chain</div></div>
-      <div><div class="n">Arbitrum</div><div class="l">Built for scale</div></div>
-      <div><div class="n">Global</div><div class="l">Opportunity without borders</div></div>
+      <div><div class="n grad">Skill</div><div class="l">Not luck, not spend</div></div>
+      <div><div class="n">USDT</div><div class="l">Rewards you own</div></div>
+      <div><div class="n">Arbitrum</div><div class="l">Fast &amp; low-cost</div></div>
+      <div><div class="n">Global</div><div class="l">Play from anywhere</div></div>
     </div>
   </div>
 </section>
 
-<!-- VISION / MISSION -->
-<section class="sec" id="vision">
+<!-- ABOUT -->
+<section class="sec" id="about">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">Who we are</div>
-      <h2>Gaming has evolved far beyond entertainment.</h2>
-      <p>It has become a global culture connecting billions of players across continents, communities, and generations. Today, the future of gaming is no longer just about playing - it's about participating, competing, owning, and earning.</p>
+      <div class="eyebrow">About Yimaa</div>
+      <h2>A gaming studio built for players.</h2>
+      <p>We're a Dubai-based studio building Play-to-Earn games. The goal is simple: games that are fun to play, fair to everyone, and rewarding for the players who master them.</p>
     </div>
     <div class="split">
       <div class="mv-card reveal">
-        <div class="ico">🎯</div>
-        <h3>Our Mission</h3>
-        <p>To create innovative gaming experiences that empower players and unlock new opportunities worldwide. From casual gamers to competitive players, talent exists everywhere - and opportunity should never be limited by geography.</p>
+        <div class="ico">🎮</div>
+        <h3>What we make</h3>
+        <p>Blockchain games where winning comes down to skill - and the rewards are real, on-chain, and yours to keep.</p>
       </div>
       <div class="mv-card reveal">
-        <div class="ico">🌐</div>
-        <h3>Our Vision</h3>
-        <p>Trusted gaming ecosystems where skill creates real value. We believe the future of gaming belongs to those who create value within it - and we're building the platforms that make that future real.</p>
+        <div class="ico">🌍</div>
+        <h3>Who we build for</h3>
+        <p>Players everywhere. Whether you're here for fun or to compete, your talent counts - no matter where you're from.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THE SHIFT -->
-<section class="sec shift" id="shift">
+<!-- WHY YIMAA -->
+<section class="sec shift" id="why">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">The new era of gaming</div>
-      <h2>From playing to owning.</h2>
-      <p>Every day, millions of people seek greater freedom, opportunity, and new ways to grow. We build for the four shifts redefining what gaming means.</p>
+      <div class="eyebrow">Why Yimaa</div>
+      <h2>What makes our games different.</h2>
+      <p>No pay-to-win. No luck-based grind. Just four promises we build every game around.</p>
     </div>
     <div class="pillars">
-      <div class="pillar reveal"><div class="num">01</div><h4>Participate</h4><p>Players are no longer spectators. They shape the worlds they play in.</p></div>
-      <div class="pillar reveal"><div class="num">02</div><h4>Compete</h4><p>Skill and performance determine success - merit over chance.</p></div>
-      <div class="pillar reveal"><div class="num">03</div><h4>Own</h4><p>Real ownership of assets, achievements, and identity on-chain.</p></div>
-      <div class="pillar reveal"><div class="num">04</div><h4>Earn</h4><p>Value created in-game becomes value players can truly keep.</p></div>
+      <div class="pillar reveal"><div class="num">01</div><h4>Skill-based</h4><p>You win by playing well - not by spending more than everyone else.</p></div>
+      <div class="pillar reveal"><div class="num">02</div><h4>Real rewards</h4><p>Earn USDT you actually own, not points locked inside an app.</p></div>
+      <div class="pillar reveal"><div class="num">03</div><h4>True ownership</h4><p>Your assets and progress live on-chain. They belong to you.</p></div>
+      <div class="pillar reveal"><div class="num">04</div><h4>Open to all</h4><p>Play from anywhere. No gatekeeping, no borders, no limits.</p></div>
     </div>
   </div>
 </section>
@@ -382,21 +467,21 @@
   <div class="wrap">
     <div class="feature">
       <div class="reveal">
-        <div class="eyebrow">Our vision, already becoming reality</div>
-        <h2 style="font-size:clamp(30px,4.4vw,46px);margin:16px 0 20px">Introducing CJC Race</h2>
-        <p style="color:var(--muted);font-size:17.5px;margin-bottom:30px">A strategic horse-racing GameFi experience inspired by one of the world's oldest and most prestigious sports. Built on Arbitrum and powered by real USDT rewards, CJC Race lets players compete in thrilling races where skill and performance determine success.</p>
+        <div class="eyebrow">Our first game</div>
+        <h2 style="font-size:clamp(30px,4.4vw,46px);margin:16px 0 20px">CJC Race</h2>
+        <p style="color:var(--muted);font-size:17.5px;margin-bottom:30px">A blockchain horse-racing game where strategy wins. Build your stable, race to compete, and earn real rewards - all on Arbitrum.</p>
         <ul>
-          <li><span class="tick">✓</span><div><h5>Strategy over luck</h5><span>Every race rewards skill, preparation, and performance.</span></div></li>
-          <li><span class="tick">✓</span><div><h5>Real USDT rewards</h5><span>On-chain value that players genuinely own and control.</span></div></li>
-          <li><span class="tick">✓</span><div><h5>Built on Arbitrum</h5><span>Fast, low-cost, and built to scale globally.</span></div></li>
+          <li><span class="tick">✓</span><div><h5>Strategy, not luck</h5><span>How you train and race is what decides the winner.</span></div></li>
+          <li><span class="tick">✓</span><div><h5>Real USDT rewards</h5><span>Winnings you own and can withdraw anytime.</span></div></li>
+          <li><span class="tick">✓</span><div><h5>Built on Arbitrum</h5><span>Fast, low-cost transactions that scale.</span></div></li>
         </ul>
-        <a class="btn btn-primary" href="#contact" style="margin-top:34px">Enter the Race →</a>
+        <a class="btn btn-primary" href="#contact" style="margin-top:34px">Play CJC Race →</a>
       </div>
       <div class="feature-card reveal">
         <div class="feature-inner">
-          <div class="race-badge"><span class="dot"></span> Live Ecosystem Product</div>
+          <div class="race-badge"><span class="dot"></span> Live Now</div>
           <h3>🏇 CJC Race</h3>
-          <p>A prestige sport, reimagined for the Play-to-Earn era. Compete, climb, and earn in a trusted racing economy.</p>
+          <p>Horse racing, reimagined for Play-to-Earn. Race, win, and earn.</p>
           <div class="chips">
             <span class="chip">🏆 GameFi</span>
             <span class="chip">⛓ Arbitrum</span>
@@ -414,32 +499,24 @@
 <section class="sec shift" id="ecosystem">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">More than one game</div>
-      <h2>A growing Play-to-Earn ecosystem.</h2>
-      <p>CJC Race is only the beginning. Yimaa Technology is building experiences across multiple gaming categories - all designed around one vision: reward skill, create opportunity, and empower players.</p>
+      <div class="eyebrow">What's next</div>
+      <h2>More games on the way.</h2>
+      <p>CJC Race is just the start. We're building a lineup of Play-to-Earn games - all around the same idea: reward skill, give players real value.</p>
     </div>
     <div class="eco-grid">
       <div class="eco live reveal">
         <div class="status on">● Live</div>
-        <div><h4>CJC Race</h4><p>Strategic horse-racing GameFi with real USDT rewards on Arbitrum.</p></div>
+        <div><h4>CJC Race</h4><p>Blockchain horse racing with real USDT rewards on Arbitrum.</p></div>
       </div>
       <div class="eco reveal">
         <div class="status soon">○ In Development</div>
-        <div><h4>New Titles</h4><p>Fresh Play-to-Earn experiences across new gaming categories.</p></div>
+        <div><h4>New Titles</h4><p>More Play-to-Earn games, across new genres.</p></div>
       </div>
       <div class="eco reveal">
-        <div class="status soon">○ Expanding</div>
-        <div><h4>Global Community</h4><p>Connecting players worldwide where talent meets opportunity.</p></div>
+        <div class="status soon">○ Growing</div>
+        <div><h4>Global Community</h4><p>Players from around the world, more every day.</p></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- BELIEF -->
-<section class="belief">
-  <div class="wrap reveal">
-    <div class="q">“</div>
-    <h2>We believe the future of gaming belongs to those who <span class="grad">create value within it.</span></h2>
   </div>
 </section>
 
@@ -447,12 +524,12 @@
 <section class="sec" id="contact">
   <div class="wrap">
     <div class="cta-band reveal">
-      <div class="eyebrow" style="justify-content:center">Yimaa Technology</div>
-      <h2 style="margin-top:14px">Building the future of Play-to-Earn.</h2>
-      <p>Partner with us, join the ecosystem, or start competing today. Reward skill, create opportunity, empower players.</p>
+      <div class="eyebrow" style="justify-content:center">Get started</div>
+      <h2 style="margin-top:14px">Ready to play?</h2>
+      <p>Jump into CJC Race, or get in touch to partner with Yimaa Technology.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="mailto:hello@yimaa.technology">Contact the Team →</a>
-        <a class="btn btn-ghost" href="#race">Play CJC Race</a>
+        <a class="btn btn-primary" href="#race">Play CJC Race →</a>
+        <a class="btn btn-ghost" href="mailto:hello@yimaa.technology">Contact Us</a>
       </div>
     </div>
   </div>
@@ -464,17 +541,17 @@
     <div class="foot-top">
       <div>
         <img src="yimaa-logo.jpeg" alt="Yimaa Technology Limited" style="width:190px;border-radius:12px;background:#fff;padding:10px 14px" />
-        <p>Building trusted Play-to-Earn gaming ecosystems where skill creates real value.</p>
-        <div class="loc" style="margin-top:18px">📍 Headquartered in Dubai, UAE</div>
+        <p>A Dubai-based studio building Play-to-Earn games where skill turns into real rewards.</p>
+        <div class="loc" style="margin-top:18px">📍 Dubai, UAE</div>
       </div>
       <div class="foot-col">
         <h6>Company</h6>
-        <a href="#vision">Vision & Mission</a>
-        <a href="#shift">The Shift</a>
-        <a href="#ecosystem">Ecosystem</a>
+        <a href="#about">About</a>
+        <a href="#why">Why Yimaa</a>
+        <a href="#ecosystem">What's Next</a>
       </div>
       <div class="foot-col">
-        <h6>Products</h6>
+        <h6>Games</h6>
         <a href="#race">CJC Race</a>
         <a href="#ecosystem">Upcoming Titles</a>
       </div>
@@ -487,7 +564,7 @@
     </div>
     <div class="foot-bottom">
       <div>© 2026 Yimaa Technology Limited. All rights reserved.</div>
-      <div>Reward skill. Create opportunity. Empower players.</div>
+      <div>Games where skill pays.</div>
     </div>
   </div>
 </footer>
@@ -502,6 +579,10 @@
   document.getElementById('menuBtn').onclick=()=>mm.classList.add('open');
   document.getElementById('closeBtn').onclick=()=>mm.classList.remove('open');
   mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));
+
+  // hero video: hide the placeholder once a real film starts playing
+  const vEl=document.getElementById('heroVideoEl'), vPh=document.getElementById('videoPh');
+  if(vEl){vEl.addEventListener('playing',()=>{if(vPh)vPh.style.display='none'});}
 
   // reveal on scroll
   const io=new IntersectionObserver((entries)=>{
