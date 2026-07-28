@@ -285,9 +285,41 @@
   }
   .loc{display:inline-flex;align-items:center;gap:8px;color:var(--muted)}
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  /* reveal (fade + slide-up + slight scale, staggered) */
+  .reveal{opacity:0;transform:translateY(38px) scale(.97);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
   .reveal.in{opacity:1;transform:none}
+
+  /* hero floating accent (looping) */
+  .hero-blobs{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+  .blob{position:absolute;border-radius:50%;filter:blur(64px);opacity:.5;will-change:transform}
+  .blob.b1{width:340px;height:340px;background:rgba(43,143,255,.38);top:-50px;left:6%;animation:float1 15s ease-in-out infinite}
+  .blob.b2{width:300px;height:300px;background:rgba(18,165,148,.28);top:14%;right:4%;animation:float2 19s ease-in-out infinite}
+  .blob.b3{width:280px;height:280px;background:rgba(95,176,255,.32);bottom:-30px;left:42%;animation:float3 17s ease-in-out infinite}
+  @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,30px)}}
+  @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-36px,26px)}}
+  @keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(24px,-30px)}}
+
+  /* infinite marquee */
+  .marquee{
+    overflow:hidden;background:var(--bg-2);
+    border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:22px 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  }
+  .marquee-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-group{display:flex;flex-shrink:0}
+  .marquee-item{
+    display:inline-flex;align-items:center;gap:12px;padding:0 34px;
+    font-size:16px;font-weight:700;color:var(--navy);white-space:nowrap;letter-spacing:-.01em;
+  }
+  .marquee-item .m-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex:none}
+  @keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none}
+    .blob,.marquee-track,.play-btn::before{animation:none !important}
+  }
 
   @media(max-width:900px){
     .nav-links,.nav-cta .btn-ghost{display:none}
@@ -358,6 +390,9 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <div class="hero-blobs" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  </div>
   <div class="grid-bg"></div>
   <div class="wrap">
     <div class="hero-center">
@@ -396,6 +431,34 @@
     </div>
   </div>
 </section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-item"><span class="m-dot"></span>Blockchain</span>
+      <span class="marquee-item"><span class="m-dot"></span>GameFi</span>
+      <span class="marquee-item"><span class="m-dot"></span>Play-to-Earn</span>
+      <span class="marquee-item"><span class="m-dot"></span>Built on Arbitrum</span>
+      <span class="marquee-item"><span class="m-dot"></span>USDT Rewards</span>
+      <span class="marquee-item"><span class="m-dot"></span>Skill-Based</span>
+      <span class="marquee-item"><span class="m-dot"></span>On-Chain</span>
+      <span class="marquee-item"><span class="m-dot"></span>Real Rewards</span>
+      <span class="marquee-item"><span class="m-dot"></span>Web3 Gaming</span>
+    </div>
+    <div class="marquee-group">
+      <span class="marquee-item"><span class="m-dot"></span>Blockchain</span>
+      <span class="marquee-item"><span class="m-dot"></span>GameFi</span>
+      <span class="marquee-item"><span class="m-dot"></span>Play-to-Earn</span>
+      <span class="marquee-item"><span class="m-dot"></span>Built on Arbitrum</span>
+      <span class="marquee-item"><span class="m-dot"></span>USDT Rewards</span>
+      <span class="marquee-item"><span class="m-dot"></span>Skill-Based</span>
+      <span class="marquee-item"><span class="m-dot"></span>On-Chain</span>
+      <span class="marquee-item"><span class="m-dot"></span>Real Rewards</span>
+      <span class="marquee-item"><span class="m-dot"></span>Web3 Gaming</span>
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section class="sec" id="about">
@@ -561,8 +624,11 @@
   const io=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
   },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{
-    el.style.transitionDelay=(i%4*60)+'ms';
+  // stagger reveals within each group (resets per section/grid)
+  document.querySelectorAll('.reveal').forEach((el)=>{
+    const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
+    const idx=Math.max(0,sibs.indexOf(el));
+    el.style.transitionDelay=Math.min(idx*90,450)+'ms';
     io.observe(el);
   });
 </script>
