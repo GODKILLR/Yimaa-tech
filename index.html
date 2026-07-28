@@ -125,7 +125,7 @@
   }
   .video-el{width:100%;display:block;border-radius:13px;aspect-ratio:16/9;object-fit:cover;background:#0b1b33}
   .video-ph{
-    position:absolute;inset:10px;border-radius:13px;overflow:hidden;display:grid;place-items:center;
+    position:absolute;inset:10px;border-radius:13px;overflow:hidden;display:grid;place-items:center;cursor:pointer;
     background:
       radial-gradient(120% 120% at 30% 15%,rgba(43,143,255,.16),transparent 55%),
       linear-gradient(180deg,#eaf1fb,#dbe7f7);
@@ -252,6 +252,7 @@
     display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line-2);
     border-radius:20px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);
   }
+  .up-card img{width:100%;height:100%;object-fit:cover;display:block;min-height:250px}
   .up-card .up-body{padding:34px;display:flex;flex-direction:column;justify-content:center}
   .up-card h4{font-size:24px;margin:14px 0 10px}
   .up-card p{color:var(--muted);font-size:15px;margin-bottom:20px}
@@ -375,8 +376,8 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-ghost" href="#games">Explore Products</a>
-      <a class="btn btn-primary" href="#cjc-race">Play CJC Race</a>
+      <a class="btn btn-ghost" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Explore Products</a>
+      <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Play CJC Race</a>
       <button class="menu-toggle" id="menuBtn" aria-label="Open menu">&#9776;</button>
     </div>
   </div>
@@ -389,7 +390,7 @@
   <a href="#games">Games</a>
   <a href="#cjc-race">CJC Race</a>
   <a href="#contact">Contact</a>
-  <a class="btn btn-primary" href="#cjc-race" style="margin-top:6px">Play CJC Race →</a>
+  <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener" style="margin-top:6px">Play CJC Race →</a>
 </div>
 
 <!-- HERO -->
@@ -403,7 +404,7 @@
       <h1 class="reveal">The Tech Company Powering <span class="grad">Blockchain &amp; GameFi.</span></h1>
       <p class="lead reveal">We build the games and the blockchain that powers them - real Play-to-Earn, live now with CJC Race.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#games">Explore Our Products →</a>
+        <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Explore Our Products →</a>
         <a class="btn btn-ghost" href="#about">About Yimaa</a>
       </div>
     </div>
@@ -414,7 +415,7 @@
          <video> with an <iframe src="...?autoplay=1&mute=1&loop=1">.
     ==================================================== -->
     <div class="video-frame hero-video reveal">
-      <video class="video-el" autoplay muted loop playsinline id="heroVideoEl">
+      <video class="video-el" playsinline preload="metadata" id="heroVideoEl">
         <source src="brand-film.mp4" type="video/mp4">
       </video>
       <div class="video-ph" id="videoPh">
@@ -516,13 +517,7 @@
     <!-- CJC RACE (LIVE) -->
     <div class="game-feature" id="cjc-race">
       <div class="game-media reveal">
-        <!-- REPLACE with: <img src="cjc-race-keyart.jpg" alt="CJC Race"> (16:9, 1920x1080) -->
-        <div class="img-ph">
-          <div>
-            <span class="ph-badge">🖼️ CJC Race key art</span>
-            <small>Drop cjc-race-keyart.jpg here &middot; 16:9 (1920&times;1080)</small>
-          </div>
-        </div>
+        <img src="cjc-race.png" alt="CJC Race - Climax Jockey Club gameplay" loading="lazy" />
       </div>
       <div class="reveal">
         <span class="badge live"><span class="dot"></span> Live Now</span>
@@ -535,8 +530,8 @@
           <span class="chip">🎯 Skill-Based</span>
         </div>
         <div class="game-cta">
-          <a class="btn btn-primary" href="#contact">Play CJC Race →</a>
-          <a class="btn btn-ghost" href="#contact">Learn More</a>
+          <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Play CJC Race →</a>
+          <a class="btn btn-ghost" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Learn More</a>
         </div>
       </div>
     </div>
@@ -545,13 +540,7 @@
     <div class="upcoming reveal">
       <div class="up-grid" style="margin:0 auto">
         <div class="up-card">
-          <!-- REPLACE with: <img src="crc-keyart.jpg" alt="CRC"> (16:9) -->
-          <div class="img-ph">
-            <div>
-              <span class="ph-badge">🖼️ CRC game art</span>
-              <small>Drop crc-keyart.jpg here &middot; 16:9</small>
-            </div>
-          </div>
+          <img src="crc-keyart.jpg" alt="CRC - Climax Running Club" loading="lazy" />
           <div class="up-body">
             <span class="badge soon">◷ Coming Soon</span>
             <h4>CRC</h4>
@@ -572,7 +561,7 @@
       <h2>Play it. Or build with us.</h2>
       <p>Jump into CJC Race, or partner with Yimaa to power your GameFi project.</p>
       <div class="game-cta">
-        <a class="btn btn-primary" href="#cjc-race">Explore CJC Race →</a>
+        <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Explore CJC Race →</a>
         <a class="btn btn-ghost" href="mailto:hello@yimaa.technology">Partner With Us</a>
       </div>
     </div>
@@ -621,9 +610,12 @@
   document.getElementById('closeBtn').onclick=()=>mm.classList.remove('open');
   mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));
 
-  // hide the video placeholder once a real film starts playing
+  // click the play button to start the brand film (with sound + controls)
   const vEl=document.getElementById('heroVideoEl'), vPh=document.getElementById('videoPh');
-  if(vEl){vEl.addEventListener('playing',()=>{if(vPh)vPh.style.display='none'});}
+  if(vEl&&vPh){
+    vEl.addEventListener('playing',()=>{vPh.style.display='none'});
+    vPh.addEventListener('click',()=>{vEl.controls=true; vEl.play().catch(()=>{});});
+  }
 
   const io=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
