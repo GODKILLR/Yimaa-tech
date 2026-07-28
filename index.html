@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Yimaa Technology - Blockchain Gaming Technology Company</title>
 <meta name="description" content="Yimaa Technology is a tech company powering blockchain and GameFi - building Play-to-Earn games where skill creates real value. Makers of CJC Race." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff;
@@ -26,6 +29,7 @@
     --shadow:0 12px 40px rgba(13,36,82,.09);
     --shadow-sm:0 4px 16px rgba(13,36,82,.07);
     --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-head:"Space Grotesk","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -44,7 +48,7 @@
     font-size:12px;letter-spacing:.22em;text-transform:uppercase;
     color:var(--blue);font-weight:700;
   }
-  h1,h2,h3{line-height:1.1;letter-spacing:-.02em;font-weight:800;color:var(--navy)}
+  h1,h2,h3{font-family:var(--font-head);line-height:1.08;letter-spacing:-.02em;font-weight:700;color:var(--navy)}
   .grad{
     background:linear-gradient(120deg,var(--blue-2),var(--blue) 55%,var(--blue-deep));
     -webkit-background-clip:text;background-clip:text;color:transparent;
@@ -84,7 +88,7 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    position:relative;padding:180px 0 100px;overflow:hidden;
+    position:relative;padding:148px 0 76px;overflow:hidden;
     background:
       radial-gradient(900px 500px at 80% -10%,rgba(43,143,255,.12),transparent 60%),
       radial-gradient(760px 520px at 5% 10%,rgba(18,165,148,.07),transparent 62%),
@@ -106,14 +110,14 @@
     background:#fff;box-shadow:var(--shadow-sm);
   }
   .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(18,165,148,.15)}
-  .hero h1{font-size:clamp(40px,6.4vw,72px);letter-spacing:-.03em}
+  .hero h1{font-size:clamp(38px,5.6vw,62px);letter-spacing:-.03em}
   .hero p.lead{
     font-size:clamp(17px,2.1vw,20px);color:var(--muted);max-width:60ch;margin:26px auto 38px;
   }
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 
   /* running video */
-  .hero-video{max-width:960px;margin:64px auto 0;position:relative}
+  .hero-video{max-width:960px;margin:46px auto 0;position:relative}
   .video-frame{
     position:relative;border:1px solid var(--line-2);border-radius:22px;padding:10px;
     background:linear-gradient(160deg,rgba(43,143,255,.14),rgba(18,165,148,.05) 60%,#fff);
@@ -291,10 +295,10 @@
 
   /* hero floating accent (looping) */
   .hero-blobs{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-  .blob{position:absolute;border-radius:50%;filter:blur(64px);opacity:.5;will-change:transform}
-  .blob.b1{width:340px;height:340px;background:rgba(43,143,255,.38);top:-50px;left:6%;animation:float1 15s ease-in-out infinite}
-  .blob.b2{width:300px;height:300px;background:rgba(18,165,148,.28);top:14%;right:4%;animation:float2 19s ease-in-out infinite}
-  .blob.b3{width:280px;height:280px;background:rgba(95,176,255,.32);bottom:-30px;left:42%;animation:float3 17s ease-in-out infinite}
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.7;will-change:transform}
+  .blob.b1{width:400px;height:400px;background:rgba(43,143,255,.5);top:-70px;left:4%;animation:float1 15s ease-in-out infinite}
+  .blob.b2{width:340px;height:340px;background:rgba(18,165,148,.36);top:10%;right:2%;animation:float2 19s ease-in-out infinite}
+  .blob.b3{width:320px;height:320px;background:rgba(95,176,255,.42);bottom:-50px;left:40%;animation:float3 17s ease-in-out infinite}
   @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,30px)}}
   @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-36px,26px)}}
   @keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(24px,-30px)}}
@@ -362,7 +366,7 @@
 
 <header id="header">
   <div class="wrap nav">
-    <a class="brand" href="#top"><img src="yimaa-logo.jpeg" alt="Yimaa Technology" /></a>
+    <a class="brand" href="#top"><img src="yimaa-logo.png" alt="Yimaa Technology" /></a>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#capabilities">Technology</a>
@@ -580,7 +584,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <img src="yimaa-logo.jpeg" alt="Yimaa Technology Limited" style="height:40px;width:auto" />
+        <img src="yimaa-logo.png" alt="Yimaa Technology Limited" style="height:44px;width:auto" />
         <p class="fdesc">A technology company powering blockchain and GameFi - building Play-to-Earn games where skill creates real value.</p>
       </div>
       <div class="foot-col">
