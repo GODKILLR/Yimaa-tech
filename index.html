@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yimaa Technology - Blockchain Gaming Technology Company</title>
-<meta name="description" content="Yimaa Technology is a tech company powering blockchain and GameFi - building Play-to-Earn games where skill creates real value. Makers of CJC Race." />
+<title>Yimaa Technology - Building the Future of Play-to-Earn Gaming</title>
+<meta name="description" content="Yimaa Technology is a global gaming technology company creating next-generation Play-to-Earn experiences. Makers of CJC Race, with CRC coming soon." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -33,268 +33,32 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:var(--font);
-    background:var(--bg);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  .eyebrow{
-    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--blue);font-weight:700;
-  }
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);font-weight:700}
   h1,h2,h3{font-family:var(--font-head);line-height:1.08;letter-spacing:-.02em;font-weight:700;color:var(--navy)}
-  .grad{
-    background:linear-gradient(120deg,var(--blue-2),var(--blue) 55%,var(--blue-deep));
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
+  .grad{background:linear-gradient(120deg,var(--blue-2),var(--blue) 55%,var(--blue-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-  /* ---------- NAV ---------- */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;
-    border-bottom:1px solid transparent;
-  }
-  header.scrolled{
-    background:rgba(255,255,255,.86);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line-2);
-    box-shadow:0 4px 20px rgba(13,36,82,.05);
-  }
+  /* NAV */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2);box-shadow:0 4px 20px rgba(13,36,82,.05)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
   .brand img{height:34px;width:auto}
-  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{font-size:14.5px;color:var(--muted);font-weight:500;transition:color .2s}
   .nav-links a:hover{color:var(--navy)}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:11px 22px;border-radius:100px;font-weight:600;font-size:14.5px;
-    transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
-  }
-  .btn-primary{
-    background:linear-gradient(120deg,var(--blue-2),var(--blue-deep));
-    color:#fff;box-shadow:0 8px 22px rgba(31,116,224,.28);
-  }
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:100px;font-weight:600;font-size:14.5px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+  .btn-primary{background:linear-gradient(120deg,var(--blue-2),var(--blue-deep));color:#fff;box-shadow:0 8px 22px rgba(31,116,224,.28)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(31,116,224,.4)}
   .btn-ghost{border:1px solid var(--line);color:var(--navy);background:#fff}
   .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
   .nav-cta{display:flex;gap:12px;align-items:center}
   .menu-toggle{display:none;background:none;border:0;color:var(--navy);font-size:26px;cursor:pointer}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;padding:148px 0 76px;overflow:hidden;
-    background:
-      radial-gradient(900px 500px at 80% -10%,rgba(43,143,255,.12),transparent 60%),
-      radial-gradient(760px 520px at 5% 10%,rgba(18,165,148,.07),transparent 62%),
-      linear-gradient(180deg,#fff,var(--bg-2));
-  }
-  .grid-bg{
-    position:absolute;inset:0;z-index:0;opacity:.6;
-    background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);
-    background-size:60px 60px;
-    mask-image:radial-gradient(ellipse 75% 60% at 50% 25%,#000 40%,transparent 100%);
-    -webkit-mask-image:radial-gradient(ellipse 75% 60% at 50% 25%,#000 40%,transparent 100%);
-  }
-  .hero .wrap{position:relative;z-index:1}
-  .hero-center{max-width:820px;margin:0 auto;text-align:center}
-  .hero-tag{
-    display:inline-flex;align-items:center;gap:9px;
-    padding:7px 16px;border:1px solid var(--line);border-radius:100px;
-    font-size:12.5px;color:var(--muted);margin-bottom:26px;font-weight:500;
-    background:#fff;box-shadow:var(--shadow-sm);
-  }
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(18,165,148,.15)}
-  .hero h1{font-size:clamp(38px,5.6vw,62px);letter-spacing:-.03em}
-  .hero p.lead{
-    font-size:clamp(17px,2.1vw,20px);color:var(--muted);max-width:60ch;margin:26px auto 38px;
-  }
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-
-  /* running video */
-  .hero-video{max-width:960px;margin:46px auto 0;position:relative}
-  .video-frame{
-    position:relative;border:1px solid var(--line-2);border-radius:22px;padding:10px;
-    background:linear-gradient(160deg,rgba(43,143,255,.14),rgba(18,165,148,.05) 60%,#fff);
-    box-shadow:var(--shadow);
-  }
-  .video-el{width:100%;display:block;border-radius:13px;aspect-ratio:16/9;object-fit:cover;background:#0b1b33}
-  .video-ph{
-    position:absolute;inset:10px;border-radius:13px;overflow:hidden;display:grid;place-items:center;cursor:pointer;
-    background:
-      radial-gradient(120% 120% at 30% 15%,rgba(43,143,255,.16),transparent 55%),
-      linear-gradient(180deg,#eaf1fb,#dbe7f7);
-  }
-  .grid-tiny{
-    position:absolute;inset:0;opacity:.6;
-    background-image:linear-gradient(rgba(13,36,82,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(13,36,82,.06) 1px,transparent 1px);
-    background-size:38px 38px;
-    mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 30%,transparent 100%);
-    -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 30%,transparent 100%);
-  }
-  .play-btn{
-    position:relative;width:76px;height:76px;border-radius:50%;cursor:pointer;
-    background:linear-gradient(120deg,var(--blue-2),var(--blue-deep));
-    display:grid;place-items:center;color:#fff;border:0;
-    box-shadow:0 10px 30px rgba(31,116,224,.45);transition:transform .25s ease;
-  }
-  .play-btn:hover{transform:scale(1.08)}
-  .play-btn::before{
-    content:"";position:absolute;inset:-10px;border-radius:50%;
-    border:1px solid rgba(31,116,224,.35);animation:pulse 2.4s ease-out infinite;
-  }
-  @keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.5);opacity:0}}
-  .play-btn svg{margin-left:5px}
-  .video-cap{
-    position:absolute;left:18px;bottom:16px;display:flex;align-items:center;gap:9px;
-    font-size:12.5px;color:var(--muted);font-weight:500;
-  }
-  .video-cap .rec{width:8px;height:8px;border-radius:50%;background:var(--teal)}
-  .video-tag{
-    position:absolute;right:18px;top:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--navy);background:#fff;padding:6px 12px;border-radius:100px;border:1px solid var(--line-2);font-weight:700;
-  }
-
-  /* trust strip */
-  .trust{
-    display:flex;gap:44px;justify-content:center;flex-wrap:wrap;
-    margin-top:60px;padding-top:38px;border-top:1px solid var(--line-2);
-  }
-  .trust .n{font-size:26px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
-  .trust .l{font-size:13px;color:var(--faint);margin-top:2px}
-
-  /* ---------- SECTIONS ---------- */
-  section{position:relative}
-  .sec{padding:100px 0}
-  .sec.alt{background:var(--bg-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
-  .sec-head{max-width:62ch;margin-bottom:56px}
-  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-  .sec-head h2{font-size:clamp(30px,4.2vw,46px);margin-top:14px}
-  .sec-head p{color:var(--muted);font-size:18px;margin-top:18px}
-
-  /* about split */
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .mv-card{
-    background:var(--panel);border:1px solid var(--line-2);border-radius:var(--r);padding:40px;
-    position:relative;overflow:hidden;box-shadow:var(--shadow-sm);
-  }
-  .mv-card::before{
-    content:"";position:absolute;top:0;left:0;bottom:0;width:3px;
-    background:linear-gradient(180deg,var(--blue-2),var(--blue-deep));
-  }
-  .mv-card .ico{
-    width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:22px;
-    background:rgba(31,116,224,.1);margin-bottom:20px;
-  }
-  .mv-card h3{font-size:22px;margin-bottom:12px}
-  .mv-card p{color:var(--muted);font-size:16px}
-
-  /* capability pillars */
-  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .pillar{
-    background:var(--panel);border:1px solid var(--line-2);border-radius:var(--r);
-    padding:30px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
-    box-shadow:var(--shadow-sm);
-  }
-  .pillar:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(31,116,224,.4)}
-  .pillar .picon{
-    width:44px;height:44px;border-radius:11px;display:grid;place-items:center;font-size:20px;
-    background:linear-gradient(140deg,rgba(43,143,255,.14),rgba(18,165,148,.1));margin-bottom:16px;
-  }
-  .pillar h4{font-size:19px;margin-bottom:8px}
-  .pillar p{color:var(--muted);font-size:14.5px}
-
-  /* GAMES */
-  .game-feature{
-    display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;
-  }
-  .game-media{
-    border:1px solid var(--line-2);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
-    background:#fff;
-  }
-  .img-ph{
-    position:relative;aspect-ratio:16/9;display:grid;place-items:center;text-align:center;
-    background:
-      radial-gradient(120% 120% at 25% 20%,rgba(43,143,255,.14),transparent 55%),
-      linear-gradient(160deg,#eaf1fb,#dce8f8);
-    color:var(--muted);
-  }
-  .img-ph .ph-badge{
-    display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--navy);
-    background:#fff;border:1px dashed var(--blue);border-radius:100px;padding:9px 16px;
-  }
-  .img-ph small{display:block;margin-top:10px;font-size:12px;color:var(--faint)}
-  .game-media img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;
-    text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:100px;
-  }
-  .badge.live{color:#0b8f5a;background:rgba(16,167,101,.12)}
-  .badge.soon{color:var(--blue-deep);background:rgba(31,116,224,.12)}
-  .game-feature h3{font-size:clamp(28px,3.6vw,40px);margin:18px 0 16px}
-  .game-feature .desc{color:var(--muted);font-size:17px;margin-bottom:26px}
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
-  .chip{
-    font-size:13px;padding:8px 14px;border-radius:100px;border:1px solid var(--line);
-    background:#fff;color:var(--navy);font-weight:500;
-  }
-  .game-cta{display:flex;gap:12px;flex-wrap:wrap}
-
-  /* upcoming card */
-  .upcoming{margin-top:80px}
-  .up-grid{display:grid;grid-template-columns:1fr;gap:24px;max-width:760px}
-  .up-card{
-    display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line-2);
-    border-radius:20px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);
-  }
-  .up-card img{width:100%;height:100%;object-fit:cover;display:block;min-height:250px}
-  .up-card .up-body{padding:34px;display:flex;flex-direction:column;justify-content:center}
-  .up-card h4{font-size:24px;margin:14px 0 10px}
-  .up-card p{color:var(--muted);font-size:15px;margin-bottom:20px}
-
-  /* CTA */
-  .cta-band{
-    border-radius:28px;padding:70px;text-align:center;position:relative;overflow:hidden;
-    background:linear-gradient(130deg,var(--navy),#123a7a 60%,var(--blue-deep));
-    box-shadow:var(--shadow);
-  }
-  .cta-band::after{
-    content:"";position:absolute;inset:0;opacity:.5;
-    background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
-    background-size:44px 44px;
-    mask-image:radial-gradient(ellipse 60% 80% at 50% 0%,#000,transparent 75%);
-    -webkit-mask-image:radial-gradient(ellipse 60% 80% at 50% 0%,#000,transparent 75%);
-  }
-  .cta-band .eyebrow{color:#8fc2ff;position:relative}
-  .cta-band h2{color:#fff;font-size:clamp(28px,4vw,44px);margin:14px 0 16px;position:relative}
-  .cta-band p{color:#c9d8ef;max-width:54ch;margin:0 auto 32px;font-size:17px;position:relative}
-  .cta-band .game-cta{justify-content:center;position:relative}
-  .cta-band .btn-ghost{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
-  .cta-band .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;color:#fff}
-
-  /* footer */
-  footer{border-top:1px solid var(--line-2);padding:66px 0 38px;background:var(--bg-2)}
-  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px}
-  .foot-top .fdesc{color:var(--muted);font-size:14.5px;margin-top:20px;max-width:34ch}
-  .foot-col h6{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
-  .foot-col a{display:block;color:var(--muted);font-size:14.5px;margin-bottom:11px;transition:color .2s}
-  .foot-col a:hover{color:var(--blue)}
-  .foot-bottom{
-    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
-    padding-top:28px;border-top:1px solid var(--line-2);color:var(--faint);font-size:13.5px;
-  }
-  .loc{display:inline-flex;align-items:center;gap:8px;color:var(--muted)}
-
-  /* reveal (fade + slide-up + slight scale, staggered) */
-  .reveal{opacity:0;transform:translateY(38px) scale(.97);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
-  .reveal.in{opacity:1;transform:none}
-
-  /* hero floating accent (looping) */
+  /* HERO */
+  .hero{position:relative;padding:148px 0 76px;overflow:hidden;background:radial-gradient(900px 500px at 80% -10%,rgba(43,143,255,.12),transparent 60%),radial-gradient(760px 520px at 5% 10%,rgba(18,165,148,.07),transparent 62%),linear-gradient(180deg,#fff,var(--bg-2))}
   .hero-blobs{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
   .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.7;will-change:transform}
   .blob.b1{width:400px;height:400px;background:rgba(43,143,255,.5);top:-70px;left:4%;animation:float1 15s ease-in-out infinite}
@@ -303,63 +67,180 @@
   @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,30px)}}
   @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-36px,26px)}}
   @keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(24px,-30px)}}
+  .grid-bg{position:absolute;inset:0;z-index:0;opacity:.6;background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 75% 60% at 50% 25%,#000 40%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 75% 60% at 50% 25%,#000 40%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-center{max-width:840px;margin:0 auto;text-align:center}
+  .hero h1{font-size:clamp(38px,5.6vw,62px);letter-spacing:-.03em}
+  .hero p.lead{font-size:clamp(17px,2.1vw,20px);color:var(--muted);max-width:62ch;margin:26px auto 38px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 
-  /* infinite marquee */
-  .marquee{
-    overflow:hidden;background:var(--bg-2);
-    border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:22px 0;
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
-    mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
-  }
+  .hero-video{max-width:960px;margin:46px auto 0;position:relative}
+  .video-frame{position:relative;border:1px solid var(--line-2);border-radius:22px;padding:10px;background:linear-gradient(160deg,rgba(43,143,255,.14),rgba(18,165,148,.05) 60%,#fff);box-shadow:var(--shadow)}
+  .video-el{width:100%;display:block;border-radius:13px;aspect-ratio:16/9;object-fit:cover;background:#0b1b33}
+  .video-ph{position:absolute;inset:10px;border-radius:13px;overflow:hidden;display:grid;place-items:center;cursor:pointer;background:radial-gradient(120% 120% at 30% 15%,rgba(43,143,255,.16),transparent 55%),linear-gradient(180deg,#eaf1fb,#dbe7f7)}
+  .grid-tiny{position:absolute;inset:0;opacity:.6;background-image:linear-gradient(rgba(13,36,82,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(13,36,82,.06) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 30%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 30%,transparent 100%)}
+  .play-btn{position:relative;width:76px;height:76px;border-radius:50%;cursor:pointer;background:linear-gradient(120deg,var(--blue-2),var(--blue-deep));display:grid;place-items:center;color:#fff;border:0;box-shadow:0 10px 30px rgba(31,116,224,.45);transition:transform .25s ease}
+  .play-btn:hover{transform:scale(1.08)}
+  .play-btn::before{content:"";position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(31,116,224,.35);animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+  .play-btn svg{margin-left:5px}
+  .video-cap{position:absolute;left:18px;bottom:16px;display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted);font-weight:500}
+  .video-cap .rec{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  .video-tag{position:absolute;right:18px;top:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:#fff;padding:6px 12px;border-radius:100px;border:1px solid var(--line-2);font-weight:700}
+
+  /* MARQUEE */
+  .marquee{overflow:hidden;background:var(--bg-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:22px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
   .marquee-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
   .marquee:hover .marquee-track{animation-play-state:paused}
   .marquee-group{display:flex;flex-shrink:0}
-  .marquee-item{
-    display:inline-flex;align-items:center;gap:12px;padding:0 34px;
-    font-size:16px;font-weight:700;color:var(--navy);white-space:nowrap;letter-spacing:-.01em;
-  }
+  .marquee-item{display:inline-flex;align-items:center;gap:12px;padding:0 34px;font-size:16px;font-weight:700;color:var(--navy);white-space:nowrap;letter-spacing:-.01em}
   .marquee-item .m-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex:none}
   @keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 
-  @media(prefers-reduced-motion:reduce){
-    .reveal{opacity:1 !important;transform:none !important;transition:none}
-    .blob,.marquee-track,.play-btn::before{animation:none !important}
-  }
+  /* SECTIONS */
+  section{position:relative}
+  .sec{padding:100px 0}
+  .sec.alt{background:var(--bg-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+  .sec-head{max-width:64ch;margin-bottom:56px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(30px,4.2vw,46px);margin-top:14px}
+  .sec-head p{color:var(--muted);font-size:18px;margin-top:18px}
 
+  /* ABOUT editorial split */
+  .about-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+  .about-split h2{font-size:clamp(28px,3.8vw,44px)}
+  .about-copy p{color:var(--muted);font-size:17.5px;margin-bottom:20px}
+  .about-copy p:last-child{margin-bottom:0}
+  .about-copy strong{color:var(--navy);font-weight:600}
+
+  /* CARD GRIDS (vision + why) */
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .vcard{background:var(--panel);border:1px solid var(--line-2);border-radius:var(--r);padding:32px 28px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;box-shadow:var(--shadow-sm)}
+  .vcard:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(31,116,224,.4)}
+  .vcard .vicon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:linear-gradient(140deg,rgba(43,143,255,.14),rgba(18,165,148,.1));margin-bottom:18px}
+  .vcard h4{font-size:20px;margin-bottom:9px}
+  .vcard p{color:var(--muted);font-size:15px}
+
+  /* GAMES */
+  .game-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  .game-media{border:1px solid var(--line-2);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+  .game-media img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:100px}
+  .badge.live{color:#0b8f5a;background:rgba(16,167,101,.12)}
+  .badge.soon{color:var(--blue-deep);background:rgba(31,116,224,.12)}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+  .game-feature h3{font-size:clamp(28px,3.6vw,40px);margin:18px 0 16px}
+  .game-feature .desc{color:var(--muted);font-size:17px;margin-bottom:26px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .chip{font-size:13px;padding:8px 14px;border-radius:100px;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:500}
+  .game-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .upcoming{margin-top:80px}
+  .up-card{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line-2);border-radius:20px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);max-width:860px;margin:0 auto}
+  .up-card img{width:100%;height:100%;object-fit:cover;display:block;min-height:250px}
+  .up-card .up-body{padding:36px;display:flex;flex-direction:column;justify-content:center}
+  .up-card h4{font-size:26px;margin:14px 0 10px}
+  .up-card p{color:var(--muted);font-size:15px;margin-bottom:8px}
+  .up-card p.small{font-size:14px;color:var(--faint);margin-bottom:22px}
+
+  /* POWERED BY */
+  .powered{text-align:center}
+  .powered .eyebrow{justify-content:center}
+  .powered h3{font-size:clamp(24px,3vw,32px);margin:12px 0 10px}
+  .powered p{color:var(--muted);margin-bottom:36px}
+  .tech-badges{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .tech-badge{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border:1px solid var(--line-2);border-radius:14px;background:#fff;box-shadow:var(--shadow-sm);font-family:var(--font-head);font-weight:700;font-size:19px;color:var(--navy)}
+  .tech-badge .tb-dot{width:10px;height:10px;border-radius:50%;background:var(--blue)}
+
+  /* ECOSYSTEM ROADMAP */
+  .eco-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .eco-card{background:#fff;border:1px solid var(--line-2);border-radius:16px;padding:28px 22px;text-align:center;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:flex-start;transition:transform .25s ease,box-shadow .25s ease}
+  .eco-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .eco-card .ecok{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .eco-card b{font-family:var(--font-head);font-size:21px;color:var(--navy);line-height:1.1}
+  .eco-card .sub{font-size:13px;color:var(--faint)}
+  .eco-card.lead{background:linear-gradient(160deg,rgba(43,143,255,.16),#fff);border-color:rgba(31,116,224,.35)}
+  .eco-card.future{border-style:dashed;opacity:.92}
+  .eco-rail{position:relative;display:grid;grid-template-columns:repeat(4,1fr);margin-top:22px}
+  .eco-rail::before{content:"";position:absolute;top:50%;left:12.5%;right:12.5%;height:3px;transform:translateY(-50%);background:linear-gradient(90deg,var(--blue-2),var(--teal) 70%,var(--line));border-radius:2px}
+  .eco-rail .node{justify-self:center;width:16px;height:16px;border-radius:50%;background:var(--blue);border:4px solid #fff;box-shadow:0 0 0 2px var(--blue);position:relative;z-index:1}
+  .eco-rail .node.live{background:#16a765;box-shadow:0 0 0 2px #16a765}
+  .eco-rail .node.live::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid rgba(16,167,101,.5);animation:pulse 2.4s ease-out infinite}
+  .eco-rail .node.future{background:var(--faint);box-shadow:0 0 0 2px var(--faint)}
+
+  /* PARTNERS */
+  .partners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+  .pchip{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:20px 22px;font-weight:600;color:var(--navy);font-size:16px;box-shadow:var(--shadow-sm);transition:transform .2s ease,border-color .2s ease}
+  .pchip:hover{transform:translateY(-3px);border-color:rgba(31,116,224,.4)}
+  .pchip .pdot{width:9px;height:9px;border-radius:50%;background:linear-gradient(120deg,var(--blue-2),var(--teal));flex:none}
+
+  /* NEWS */
+  .news-empty{text-align:center;border:1px dashed var(--line);border-radius:20px;padding:56px 28px;background:var(--bg-2)}
+  .news-empty h3{font-size:22px;margin-bottom:10px}
+  .news-empty p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+
+  /* CONTACT / CTA */
+  .cta-band{border-radius:28px;padding:70px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(130deg,var(--navy),#123a7a 60%,var(--blue-deep));box-shadow:var(--shadow)}
+  .cta-band::after{content:"";position:absolute;inset:0;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 60% 80% at 50% 0%,#000,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 60% 80% at 50% 0%,#000,transparent 75%)}
+  .cta-band .eyebrow{color:#8fc2ff;position:relative}
+  .cta-band h2{color:#fff;font-size:clamp(28px,4vw,44px);margin:14px 0 16px;position:relative}
+  .cta-band p{color:#c9d8ef;max-width:56ch;margin:0 auto 32px;font-size:17px;position:relative}
+  .cta-band .game-cta{justify-content:center;position:relative}
+  .cta-band .btn-ghost{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
+  .cta-band .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;color:#fff}
+  .cta-note{position:relative;margin-top:26px;font-size:13px;color:#9fb6d8}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line-2);padding:66px 0 38px;background:var(--bg-2)}
+  .foot-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:36px;margin-bottom:46px}
+  .foot-top .fdesc{color:var(--muted);font-size:14.5px;margin-top:20px;max-width:32ch}
+  .foot-col h6{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+  .foot-col a{display:block;color:var(--muted);font-size:14.5px;margin-bottom:11px;transition:color .2s}
+  .foot-col a:hover{color:var(--blue)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:28px;border-top:1px solid var(--line-2);color:var(--faint);font-size:13.5px}
+
+  .reveal{opacity:0;transform:translateY(38px) scale(.97);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:980px){
+    .card-grid,.partners-grid{grid-template-columns:1fr 1fr}
+    .about-split{grid-template-columns:1fr;gap:24px}
+  }
   @media(max-width:900px){
     .nav-links,.nav-cta .btn-ghost{display:none}
     .menu-toggle{display:block}
-    .split,.pillars,.game-feature,.up-card,.foot-top{grid-template-columns:1fr}
-    .pillars{grid-template-columns:1fr 1fr}
+    .game-feature,.up-card,.foot-top{grid-template-columns:1fr}
     .game-media{order:-1}
-    .up-card .img-ph{aspect-ratio:16/9}
     .hero{padding:140px 0 70px}
-    .sec{padding:72px 0}
+    .sec{padding:74px 0}
     .cta-band{padding:48px 26px}
     .upcoming{margin-top:56px}
+    .foot-top{grid-template-columns:1fr 1fr}
+    .eco-cards{grid-template-columns:1fr 1fr}
+    .eco-rail{display:none}
   }
   @media(max-width:600px){
     .wrap{padding:0 18px}
     .nav{height:64px}
     .brand img{height:28px}
     .nav-cta .btn-primary{padding:9px 16px;font-size:13.5px}
-    .pillars{grid-template-columns:1fr}
+    .card-grid,.partners-grid,.eco-cards{grid-template-columns:1fr}
     .hero{padding:118px 0 56px}
     .hero-video{margin-top:44px}
-    .trust{gap:26px;margin-top:44px}
     .hero-cta .btn,.game-cta .btn{width:100%;justify-content:center}
-    .mv-card{padding:28px}
     .sec{padding:60px 0}
+    .foot-top{grid-template-columns:1fr}
     .foot-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+    .tech-badge{width:100%;justify-content:center}
   }
   @media(max-width:380px){ .nav-cta .btn-primary{display:none} }
-
-  .mobile-menu{
-    position:fixed;inset:0;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(10px);
-    display:none;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none}
+    .blob,.marquee-track,.play-btn::before{animation:none !important}
   }
+
+  .mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(255,255,255,.98);backdrop-filter:blur(10px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:24px}
   .mobile-menu.open{display:flex}
-  .mobile-menu a{font-size:22px;color:var(--navy);font-weight:600}
+  .mobile-menu a{font-size:21px;color:var(--navy);font-weight:600}
   .mobile-menu .close{position:absolute;top:24px;right:26px;font-size:30px;background:none;border:0;color:var(--navy)}
 </style>
 </head>
@@ -370,13 +251,14 @@
     <a class="brand" href="#top"><img src="yimaa-logo.png" alt="Yimaa Technology" /></a>
     <nav class="nav-links">
       <a href="#about">About</a>
-      <a href="#capabilities">Technology</a>
+      <a href="#vision">Vision</a>
       <a href="#games">Games</a>
-      <a href="#cjc-race">CJC Race</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#partners">Partners</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-ghost" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Explore Products</a>
+      <a class="btn btn-ghost" href="#partners">Partner With Us</a>
       <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Play CJC Race</a>
       <button class="menu-toggle" id="menuBtn" aria-label="Open menu">&#9776;</button>
     </div>
@@ -386,34 +268,29 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="close" id="closeBtn" aria-label="Close menu">&times;</button>
   <a href="#about">About</a>
-  <a href="#capabilities">Technology</a>
+  <a href="#vision">Vision</a>
   <a href="#games">Games</a>
-  <a href="#cjc-race">CJC Race</a>
+  <a href="#ecosystem">Ecosystem</a>
+  <a href="#partners">Partners</a>
   <a href="#contact">Contact</a>
   <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener" style="margin-top:6px">Play CJC Race →</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-blobs" aria-hidden="true">
-    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
-  </div>
+  <div class="hero-blobs" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
   <div class="grid-bg"></div>
   <div class="wrap">
     <div class="hero-center">
-      <h1 class="reveal">The Tech Company Powering <span class="grad">Blockchain &amp; GameFi.</span></h1>
-      <p class="lead reveal">We build the games and the blockchain that powers them - real Play-to-Earn, live now with CJC Race.</p>
+      <h1 class="reveal">Building the Future of <span class="grad">Play-to-Earn Gaming</span></h1>
+      <p class="lead reveal">Yimaa Technology is a global gaming technology company creating next-generation Play-to-Earn experiences where immersive gameplay, digital ownership, and rewarding competition come together.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Explore Our Products →</a>
-        <a class="btn btn-ghost" href="#about">About Yimaa</a>
+        <a class="btn btn-primary" href="#games">Explore Our Games →</a>
+        <a class="btn btn-ghost" href="#partners">Partner With Us</a>
       </div>
     </div>
 
-    <!-- ================= HOMEPAGE VIDEO =================
-         The brand film runs here. Drop brand-film.mp4 in this folder
-         (it will autoplay/loop). Prefer YouTube/Vimeo? Replace the
-         <video> with an <iframe src="...?autoplay=1&mute=1&loop=1">.
-    ==================================================== -->
+    <!-- HOMEPAGE BRAND VIDEO (click-to-play) -->
     <div class="video-frame hero-video reveal">
       <video class="video-el" playsinline preload="metadata" id="heroVideoEl">
         <source src="brand-film.mp4" type="video/mp4">
@@ -421,18 +298,9 @@
       <div class="video-ph" id="videoPh">
         <div class="grid-tiny"></div>
         <span class="video-tag">Brand Film</span>
-        <button class="play-btn" aria-label="Play brand film">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
+        <button class="play-btn" aria-label="Play brand film"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
         <div class="video-cap"><span class="rec"></span> Yimaa Technology &middot; Brand Film</div>
       </div>
-    </div>
-
-    <div class="trust reveal">
-      <div><div class="n">GameFi</div><div class="l">Play-to-Earn, done right</div></div>
-      <div><div class="n">Arbitrum</div><div class="l">Fast, low-cost chain</div></div>
-      <div><div class="n">USDT</div><div class="l">Real, on-chain rewards</div></div>
-      <div><div class="n">Global</div><div class="l">Play from anywhere</div></div>
     </div>
   </div>
 </section>
@@ -441,66 +309,50 @@
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <div class="marquee-group">
-      <span class="marquee-item"><span class="m-dot"></span>Blockchain</span>
-      <span class="marquee-item"><span class="m-dot"></span>GameFi</span>
       <span class="marquee-item"><span class="m-dot"></span>Play-to-Earn</span>
-      <span class="marquee-item"><span class="m-dot"></span>Built on Arbitrum</span>
-      <span class="marquee-item"><span class="m-dot"></span>USDT Rewards</span>
-      <span class="marquee-item"><span class="m-dot"></span>Skill-Based</span>
-      <span class="marquee-item"><span class="m-dot"></span>On-Chain</span>
+      <span class="marquee-item"><span class="m-dot"></span>Immersive Gameplay</span>
+      <span class="marquee-item"><span class="m-dot"></span>Digital Ownership</span>
+      <span class="marquee-item"><span class="m-dot"></span>Skill-Based Competition</span>
       <span class="marquee-item"><span class="m-dot"></span>Real Rewards</span>
-      <span class="marquee-item"><span class="m-dot"></span>Web3 Gaming</span>
+      <span class="marquee-item"><span class="m-dot"></span>Global Communities</span>
     </div>
     <div class="marquee-group">
-      <span class="marquee-item"><span class="m-dot"></span>Blockchain</span>
-      <span class="marquee-item"><span class="m-dot"></span>GameFi</span>
       <span class="marquee-item"><span class="m-dot"></span>Play-to-Earn</span>
-      <span class="marquee-item"><span class="m-dot"></span>Built on Arbitrum</span>
-      <span class="marquee-item"><span class="m-dot"></span>USDT Rewards</span>
-      <span class="marquee-item"><span class="m-dot"></span>Skill-Based</span>
-      <span class="marquee-item"><span class="m-dot"></span>On-Chain</span>
+      <span class="marquee-item"><span class="m-dot"></span>Immersive Gameplay</span>
+      <span class="marquee-item"><span class="m-dot"></span>Digital Ownership</span>
+      <span class="marquee-item"><span class="m-dot"></span>Skill-Based Competition</span>
       <span class="marquee-item"><span class="m-dot"></span>Real Rewards</span>
-      <span class="marquee-item"><span class="m-dot"></span>Web3 Gaming</span>
+      <span class="marquee-item"><span class="m-dot"></span>Global Communities</span>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="sec" id="about">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Why we exist</div>
-      <h2>Skill should create real value.</h2>
-      <p>That's the idea Yimaa is built on. In most games, the value players create stays locked inside them. We're changing that - building worlds where how well you play becomes rewards you genuinely own, open to anyone, anywhere.</p>
+  <div class="wrap about-split">
+    <div class="reveal">
+      <div class="eyebrow">About Us</div>
+      <h2 style="margin-top:14px">We're Building Games That Reward Skill</h2>
     </div>
-    <div class="split">
-      <div class="mv-card reveal">
-        <div class="ico">🌍</div>
-        <h3>Players first</h3>
-        <p>Talent is everywhere. Our games reward skill and performance - so anyone, anywhere, can compete and earn.</p>
-      </div>
-      <div class="mv-card reveal">
-        <div class="ico">💠</div>
-        <h3>Value that's real</h3>
-        <p>Rewards are paid on-chain in USDT. What you earn is truly yours - to keep, hold, or withdraw.</p>
-      </div>
+    <div class="about-copy reveal">
+      <p>Yimaa Technology is a gaming technology company dedicated to creating immersive Play-to-Earn experiences for players around the world.</p>
+      <p>We believe great games should <strong>entertain first</strong>. By combining engaging gameplay with digital ownership and innovative game economies, we're building experiences where players don't just play - they participate, compete, and create value.</p>
+      <p>Our mission is to develop a growing portfolio of games that redefine the future of interactive entertainment.</p>
     </div>
   </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section class="sec alt" id="capabilities">
+<!-- VISION -->
+<section class="sec alt" id="vision">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow">What we power</div>
-      <h2>The tech behind Play-to-Earn.</h2>
-      <p>Everything our games run on - the chain, the rewards, the gameplay - comes together under one roof.</p>
+      <div class="eyebrow">Our Vision</div>
+      <h2>Creating the Next Generation of Gaming</h2>
     </div>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="picon">⛓️</div><h4>Blockchain</h4><p>On-chain systems that move real value, running on Arbitrum.</p></div>
-      <div class="pillar reveal"><div class="picon">🎮</div><h4>GameFi</h4><p>Play-to-Earn games where skill - not luck - decides the rewards.</p></div>
-      <div class="pillar reveal"><div class="picon">💰</div><h4>Real rewards</h4><p>USDT payouts players own and withdraw. No points, no IOUs.</p></div>
-      <div class="pillar reveal"><div class="picon">📈</div><h4>Built to scale</h4><p>Fast, low-cost, and ready for a growing global player base.</p></div>
+    <div class="card-grid">
+      <div class="vcard reveal"><div class="vicon">🎮</div><h4>Gaming First</h4><p>We build games players genuinely enjoy playing, where entertainment always comes first.</p></div>
+      <div class="vcard reveal"><div class="vicon">🏆</div><h4>Reward Skill</h4><p>Our ecosystems are designed to reward strategy, performance, and participation.</p></div>
+      <div class="vcard reveal"><div class="vicon">🌐</div><h4>Global Communities</h4><p>We create connected gaming experiences for players around the world.</p></div>
     </div>
   </div>
 </section>
@@ -509,20 +361,18 @@
 <section class="sec" id="games">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="eyebrow">Our GameFi</div>
-      <h2>Meet our games.</h2>
-      <p>We build Play-to-Earn GameFi projects - real games with real on-chain rewards. CJC Race is live. CRC is next.</p>
+      <div class="eyebrow">Our Games</div>
+      <h2>A Growing Gaming Ecosystem</h2>
     </div>
 
-    <!-- CJC RACE (LIVE) -->
     <div class="game-feature" id="cjc-race">
       <div class="game-media reveal">
         <img src="cjc-race.png" alt="CJC Race - Climax Jockey Club gameplay" loading="lazy" />
       </div>
       <div class="reveal">
-        <span class="badge live"><span class="dot"></span> Live Now</span>
+        <span class="badge live"><span class="dot"></span> Live</span>
         <h3>CJC Race</h3>
-        <p class="desc">Blockchain horse racing where skill takes the purse. Build your stable, race for real USDT, and keep what you win - live on Arbitrum.</p>
+        <p class="desc">A competitive horse racing experience inspired by one of the world's oldest sports. Build your stable, compete in tournaments, and earn rewards through skill and strategy.</p>
         <div class="chips">
           <span class="chip">🏇 Horse Racing</span>
           <span class="chip">⛓ Arbitrum</span>
@@ -530,40 +380,134 @@
           <span class="chip">🎯 Skill-Based</span>
         </div>
         <div class="game-cta">
-          <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Play CJC Race →</a>
-          <a class="btn btn-ghost" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Learn More</a>
+          <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Play Now →</a>
         </div>
       </div>
     </div>
 
-    <!-- CRC (UPCOMING) -->
     <div class="upcoming reveal">
-      <div class="up-grid" style="margin:0 auto">
-        <div class="up-card">
-          <img src="crc-keyart.jpg" alt="CRC - Climax Running Club" loading="lazy" />
-          <div class="up-body">
-            <span class="badge soon">◷ Coming Soon</span>
-            <h4>CRC</h4>
-            <p>Our next Play-to-Earn GameFi project, built on the same blockchain tech as CJC Race. Reveal coming soon.</p>
-            <div class="game-cta"><a class="btn btn-ghost" href="#contact">Get Notified</a></div>
-          </div>
+      <div class="up-card">
+        <img src="crc-keyart.jpg" alt="CRC - Climax Running Club" loading="lazy" />
+        <div class="up-body">
+          <span class="badge soon"><span class="dot"></span> Coming Soon</span>
+          <h4>CRC</h4>
+          <p>A new competitive Play-to-Earn experience expanding the Yimaa ecosystem.</p>
+          <p class="small">More details coming soon.</p>
+          <div class="game-cta"><a class="btn btn-ghost" href="#contact">Learn More</a></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- WHY PLAYERS CHOOSE YIMAA -->
+<section class="sec alt" id="why">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Why Players Choose Yimaa</div>
+      <h2>Built for players who want more</h2>
+    </div>
+    <div class="card-grid">
+      <div class="vcard reveal"><div class="vicon">🎮</div><h4>Immersive Gameplay</h4><p>Designed to entertain, challenge, and keep players engaged.</p></div>
+      <div class="vcard reveal"><div class="vicon">🏆</div><h4>Skill-Based Competition</h4><p>Success is driven by strategy, performance, and player decisions.</p></div>
+      <div class="vcard reveal"><div class="vicon">💰</div><h4>Real Rewards</h4><p>Earn USDT through gameplay and ecosystem participation.</p></div>
+      <div class="vcard reveal"><div class="vicon">⚡</div><h4>Built on Arbitrum</h4><p>Fast, secure, and scalable blockchain infrastructure.</p></div>
+      <div class="vcard reveal"><div class="vicon">🔗</div><h4>Seamless Wallet Integration</h4><p>Connect easily with supported wallets, including OKX Wallet.</p></div>
+      <div class="vcard reveal"><div class="vicon">🌐</div><h4>Global Player Community</h4><p>Compete, connect, and grow alongside players from around the world.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POWERED BY -->
+<section class="sec" id="powered">
+  <div class="wrap powered reveal">
+    <div class="eyebrow">Powered by Leading Technologies</div>
+    <h3>Trusted technology powering the Yimaa ecosystem</h3>
+    <p>The infrastructure our games and rewards are built on.</p>
+    <div class="tech-badges">
+      <span class="tech-badge"><span class="tb-dot"></span>Arbitrum</span>
+      <span class="tech-badge"><span class="tb-dot"></span>USDT</span>
+      <span class="tech-badge"><span class="tb-dot"></span>OKX Wallet</span>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="sec alt" id="ecosystem">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Our Ecosystem</div>
+      <h2>One Company. Multiple Experiences.</h2>
+      <p>The Yimaa ecosystem is designed to grow beyond a single title. Every game we build shares the same vision - creating engaging experiences where players can compete, own, and earn.</p>
+    </div>
+    <div class="reveal">
+      <div class="eco-cards">
+        <div class="eco-card lead"><span class="ecok">The Company</span><b>Yimaa Technology</b><span class="sub">Builds every title</span></div>
+        <div class="eco-card"><span class="badge live"><span class="dot"></span> Live</span><b>CJC Race</b><span class="sub">Horse racing</span></div>
+        <div class="eco-card"><span class="badge soon"><span class="dot"></span> Coming Soon</span><b>CRC</b><span class="sub">Running club</span></div>
+        <div class="eco-card future"><span class="ecok">Next</span><b>Future Titles</b><span class="sub">More to come</span></div>
+      </div>
+      <div class="eco-rail" aria-hidden="true">
+        <span class="node lead"></span>
+        <span class="node live"></span>
+        <span class="node"></span>
+        <span class="node future"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="sec" id="partners">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Partners</div>
+      <h2>Building the Future Together</h2>
+      <p>We're always looking to collaborate with partners who share our vision for the future of gaming.</p>
+    </div>
+    <div class="partners-grid">
+      <div class="pchip reveal"><span class="pdot"></span>Strategic Partners</div>
+      <div class="pchip reveal"><span class="pdot"></span>Gaming Studios</div>
+      <div class="pchip reveal"><span class="pdot"></span>Blockchain Partners</div>
+      <div class="pchip reveal"><span class="pdot"></span>Communities &amp; Guilds</div>
+      <div class="pchip reveal"><span class="pdot"></span>Creators &amp; Influencers</div>
+      <div class="pchip reveal"><span class="pdot"></span>Media</div>
+    </div>
+    <div style="text-align:center" class="reveal">
+      <a class="btn btn-primary" href="#contact">Become a Partner →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST NEWS -->
+<section class="sec alt" id="news">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Latest News</div>
+      <h2>What's Happening at Yimaa</h2>
+      <p>Announcements, product updates, partnerships, events, and company news.</p>
+    </div>
+    <div class="news-empty reveal">
+      <h3>Announcements coming soon</h3>
+      <p>We're just getting started. Follow us to be the first to hear about launches, partnerships, and events.</p>
+      <a class="btn btn-ghost" href="#contact">Stay Updated</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="sec" id="contact">
   <div class="wrap">
     <div class="cta-band reveal">
-      <div class="eyebrow">Get started</div>
-      <h2>Play it. Or build with us.</h2>
-      <p>Jump into CJC Race, or partner with Yimaa to power your GameFi project.</p>
+      <div class="eyebrow">Contact</div>
+      <h2>Let's Build the Future of Gaming Together</h2>
+      <p>Whether you're interested in partnerships, media, careers, or our games, we'd love to hear from you.</p>
       <div class="game-cta">
-        <a class="btn btn-primary" href="https://www.cjcrace.io/" target="_blank" rel="noopener">Explore CJC Race →</a>
-        <a class="btn btn-ghost" href="mailto:hello@yimaa.technology">Partner With Us</a>
+        <a class="btn btn-primary" href="mailto:hello@yimaa.technology">Contact Us</a>
+        <a class="btn btn-ghost" href="mailto:business@yimaa.technology">Business Enquiries</a>
+        <a class="btn btn-ghost" href="mailto:media@yimaa.technology">Media Enquiries</a>
       </div>
+      <div class="cta-note">Company information and registered office address can be displayed here.</div>
     </div>
   </div>
 </section>
@@ -574,29 +518,37 @@
     <div class="foot-top">
       <div>
         <img src="yimaa-logo.png" alt="Yimaa Technology Limited" style="height:44px;width:auto" />
-        <p class="fdesc">A technology company powering blockchain and GameFi - building Play-to-Earn games where skill creates real value.</p>
+        <p class="fdesc">A global gaming technology company creating next-generation Play-to-Earn experiences.</p>
       </div>
       <div class="foot-col">
-        <h6>Company</h6>
+        <h6>Navigation</h6>
         <a href="#about">About</a>
-        <a href="#capabilities">Technology</a>
-        <a href="#games">Products</a>
+        <a href="#games">Our Games</a>
+        <a href="#partners">Partners</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="foot-col">
-        <h6>Games</h6>
-        <a href="#cjc-race">CJC Race</a>
+        <h6>Products</h6>
+        <a href="https://www.cjcrace.io/" target="_blank" rel="noopener">CJC Race</a>
         <a href="#games">CRC</a>
       </div>
       <div class="foot-col">
-        <h6>Connect</h6>
-        <a href="mailto:hello@yimaa.technology">hello@yimaa.technology</a>
-        <a href="#contact">Partnerships</a>
-        <a href="#contact">Careers</a>
+        <h6>Community</h6>
+        <a href="#" aria-label="Discord">Discord</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="Telegram">Telegram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
       </div>
     </div>
     <div class="foot-bottom">
       <div>© 2026 Yimaa Technology Limited. All rights reserved.</div>
-      <div>Powering blockchain &amp; GameFi.</div>
+      <div>Building the future of Play-to-Earn gaming.</div>
     </div>
   </div>
 </footer>
@@ -620,7 +572,6 @@
   const io=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
   },{threshold:.12});
-  // stagger reveals within each group (resets per section/grid)
   document.querySelectorAll('.reveal').forEach((el)=>{
     const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
     const idx=Math.max(0,sibs.indexOf(el));
